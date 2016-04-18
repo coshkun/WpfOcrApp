@@ -1,44 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="data3000Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="data3000Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="data3000ModelStoreContainer">
+    <EntitySet Name="Corrections" EntityType="data3000Model.Store.Corrections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Folyo" EntityType="data3000Model.Store.Folyo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Katalog" EntityType="data3000Model.Store.Katalog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notices" EntityType="data3000Model.Store.Notices" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="NoticesCorrections" Association="data3000Model.Store.NoticesCorrections">
+      <End Role="Notices" EntitySet="Notices" />
+      <End Role="Corrections" EntitySet="Corrections" />
+    </AssociationSet>
+    <AssociationSet Name="FolyoCorrections" Association="data3000Model.Store.FolyoCorrections">
+      <End Role="Folyo" EntitySet="Folyo" />
+      <End Role="Corrections" EntitySet="Corrections" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Corrections">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="CorrectionId" Type="int" />
-    <Property Name="MapId" Type="int" />
+    <Property Name="CorrectionId" Type="int" Nullable="true" />
+    <Property Name="MapId" Type="int" Nullable="true" />
+    <Property Name="Notices_Id" Type="int" Nullable="false" />
+    <Property Name="Folyo_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Folyo">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="MapNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="MapTittle" Type="nvarchar" MaxLength="50" />
-    <Property Name="CorrId" Type="int" />
+    <Property Name="MapNumber" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CorrId" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Katalog">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="MapNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="MapTittle" Type="nvarchar" MaxLength="50" />
+    <Property Name="MapNumber" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="50" />
   </EntityType>
   <EntityType Name="Notices">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="NoticeNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="WeekNo" Type="int" />
-    <Property Name="YearNo" Type="int" />
-    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="NoticeNumber" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="WeekNo" Type="int" Nullable="true" />
+    <Property Name="YearNo" Type="int" Nullable="true" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
-  <EntityContainer Name="data3000ModelStoreContainer">
-    <EntitySet Name="Corrections" EntityType="Self.Corrections" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Folyo" EntityType="Self.Folyo" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Katalog" EntityType="Self.Katalog" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
-  </EntityContainer>
+  <Association Name="NoticesCorrections">
+    <End Role="Notices" Type="data3000Model.Store.Notices" Multiplicity="1" />
+    <End Role="Corrections" Type="data3000Model.Store.Corrections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notices">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Corrections">
+        <PropertyRef Name="Notices_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FolyoCorrections">
+    <End Role="Folyo" Type="data3000Model.Store.Folyo" Multiplicity="1" />
+    <End Role="Corrections" Type="data3000Model.Store.Corrections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Folyo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Corrections">
+        <PropertyRef Name="Folyo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

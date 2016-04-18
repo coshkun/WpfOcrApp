@@ -17,5 +17,8 @@ namespace WpfOcrApp.appdata
         public int Id { get; set; }
         public Nullable<int> CorrectionId { get; set; }
         public Nullable<int> MapId { get; set; }
+    
+        public virtual Notices Notices { get; set; }
+        public virtual Folyo Folyo { get; set; }
     }
 }

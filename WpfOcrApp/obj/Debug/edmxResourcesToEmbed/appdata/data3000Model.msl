@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="data3000ModelStoreContainer" CdmEntityContainer="data3000Entities">
     <EntitySetMapping Name="Corrections">
-      <EntityTypeMapping TypeName="data3000Model.Corrections">
+      <EntityTypeMapping TypeName="IsTypeOf(data3000Model.Corrections)">
         <MappingFragment StoreEntitySet="Corrections">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="CorrectionId" ColumnName="CorrectionId" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Folyo">
-      <EntityTypeMapping TypeName="data3000Model.Folyo">
+      <EntityTypeMapping TypeName="IsTypeOf(data3000Model.Folyo)">
         <MappingFragment StoreEntitySet="Folyo">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Katalog">
-      <EntityTypeMapping TypeName="data3000Model.Katalog">
+      <EntityTypeMapping TypeName="IsTypeOf(data3000Model.Katalog)">
         <MappingFragment StoreEntitySet="Katalog">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Notices">
-      <EntityTypeMapping TypeName="data3000Model.Notices">
+      <EntityTypeMapping TypeName="IsTypeOf(data3000Model.Notices)">
         <MappingFragment StoreEntitySet="Notices">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NoticeNumber" ColumnName="NoticeNumber" />
@@ -40,5 +40,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="NoticesCorrections" TypeName="data3000Model.NoticesCorrections" StoreEntitySet="Corrections">
+      <EndProperty Name="Notices">
+        <ScalarProperty Name="Id" ColumnName="Notices_Id" />
+      </EndProperty>
+      <EndProperty Name="Corrections">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FolyoCorrections" TypeName="data3000Model.FolyoCorrections" StoreEntitySet="Corrections">
+      <EndProperty Name="Folyo">
+        <ScalarProperty Name="Id" ColumnName="Folyo_Id" />
+      </EndProperty>
+      <EndProperty Name="Corrections">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

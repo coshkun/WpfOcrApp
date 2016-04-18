@@ -5,10 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="36b9f2e9aeb6475f9a84fbf6cb6bbbf5" Name="Diagram1">
-        <EntityTypeShape EntityType="data3000Model.Corrections" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="data3000Model.Folyo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="data3000Model.Corrections" Width="1.5" PointX="2.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="data3000Model.Folyo" Width="1.5" PointX="4.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="data3000Model.Katalog" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="data3000Model.Notices" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="data3000Model.Notices" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="data3000Model.NoticesCorrections" />
+        <AssociationConnector Association="data3000Model.FolyoCorrections" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,6 +7,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="CorrectionId" Type="Int32" />
     <Property Name="MapId" Type="Int32" />
+    <NavigationProperty Name="Notices" Relationship="data3000Model.NoticesCorrections" FromRole="Corrections" ToRole="Notices" />
+    <NavigationProperty Name="Folyo" Relationship="data3000Model.FolyoCorrections" FromRole="Corrections" ToRole="Folyo" />
   </EntityType>
   <EntityType Name="Folyo">
     <Key>
@@ -16,6 +18,7 @@
     <Property Name="MapNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MapTittle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CorrId" Type="Int32" />
+    <NavigationProperty Name="Corrections" Relationship="data3000Model.FolyoCorrections" FromRole="Folyo" ToRole="Corrections" />
   </EntityType>
   <EntityType Name="Katalog">
     <Key>
@@ -34,11 +37,28 @@
     <Property Name="WeekNo" Type="Int32" />
     <Property Name="YearNo" Type="Int32" />
     <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Corrections" Relationship="data3000Model.NoticesCorrections" FromRole="Notices" ToRole="Corrections" />
   </EntityType>
   <EntityContainer Name="data3000Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Corrections" EntityType="Self.Corrections" />
     <EntitySet Name="Folyo" EntityType="Self.Folyo" />
     <EntitySet Name="Katalog" EntityType="Self.Katalog" />
     <EntitySet Name="Notices" EntityType="Self.Notices" />
+    <AssociationSet Name="NoticesCorrections" Association="data3000Model.NoticesCorrections">
+      <End Role="Notices" EntitySet="Notices" />
+      <End Role="Corrections" EntitySet="Corrections" />
+    </AssociationSet>
+    <AssociationSet Name="FolyoCorrections" Association="data3000Model.FolyoCorrections">
+      <End Role="Folyo" EntitySet="Folyo" />
+      <End Role="Corrections" EntitySet="Corrections" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="NoticesCorrections">
+    <End Type="data3000Model.Notices" Role="Notices" Multiplicity="1" />
+    <End Type="data3000Model.Corrections" Role="Corrections" Multiplicity="*" />
+  </Association>
+  <Association Name="FolyoCorrections">
+    <End Type="data3000Model.Folyo" Role="Folyo" Multiplicity="1" />
+    <End Type="data3000Model.Corrections" Role="Corrections" Multiplicity="*" />
+  </Association>
 </Schema>

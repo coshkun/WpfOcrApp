@@ -10,6 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000model.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000model.edmx.sql")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000model.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cvextern.dll")]

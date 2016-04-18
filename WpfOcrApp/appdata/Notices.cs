@@ -14,10 +14,19 @@ namespace WpfOcrApp.appdata
     
     public partial class Notices
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Notices()
+        {
+            this.Corrections = new HashSet<Corrections>();
+        }
+    
         public int Id { get; set; }
         public string NoticeNumber { get; set; }
         public Nullable<int> WeekNo { get; set; }
         public Nullable<int> YearNo { get; set; }
         public string Comment { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Corrections> Corrections { get; set; }
     }
 }

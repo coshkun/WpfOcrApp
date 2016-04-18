@@ -214,6 +214,7 @@
       <DependentUpon>data3000Model.edmx</DependentUpon>
       <LastGenOutput>data3000Model.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="appdata\data3000Model.edmx.sql" />
     <Content Include="appdata\data3000Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>data3000Model.edmx</DependentUpon>

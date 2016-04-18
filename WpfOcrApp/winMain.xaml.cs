@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,6 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using WpfOcrApp.appdata;
 
 namespace WpfOcrApp
 {
@@ -18,9 +22,12 @@ namespace WpfOcrApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public data3000Entities kontess;
+
         public MainWindow()
         {
             InitializeComponent();
+            kontess = new data3000Entities();
         }
 
         private void btnOCR_Click(object sender, RoutedEventArgs e)
@@ -43,7 +50,20 @@ namespace WpfOcrApp
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
+
             lstNoticedMaps.Items.Clear();
+            List<object> lst = new List<object>();
+            var snc = from map in kontess.Katalog
+                      select new
+                      {
+                          map.Id,
+                          map.MapNumber,
+                          map.MapTittle
+                      };
+
+            dataGrid1.ItemsSource = snc.ToList();
+            
         }
     }
 }

@@ -77,4 +77,3 @@ C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.Propert
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.csproj.GenerateResource.Cache
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.exe
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.pdb
-C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.csprojResolveAssemblyReference.cache

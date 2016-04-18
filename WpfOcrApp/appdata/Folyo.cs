@@ -14,9 +14,18 @@ namespace WpfOcrApp.appdata
     
     public partial class Folyo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Folyo()
+        {
+            this.Corrections = new HashSet<Corrections>();
+        }
+    
         public int Id { get; set; }
         public string MapNumber { get; set; }
         public string MapTittle { get; set; }
         public Nullable<int> CorrId { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Corrections> Corrections { get; set; }
     }
 }
