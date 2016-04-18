@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/18/2016 17:10:23
+-- Date Created: 04/18/2016 23:43:34
 -- Generated from EDMX file: C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\appdata\data3000Model.edmx
 -- --------------------------------------------------
 
@@ -62,7 +62,12 @@ GO
 CREATE TABLE [dbo].[Katalog] (
     [Id] int  NOT NULL,
     [MapNumber] nvarchar(50)  NULL,
-    [MapTittle] nvarchar(50)  NULL
+    [MapTittle] nvarchar(255)  NULL,
+    [MapScale] nvarchar(50)  NULL,
+    [EditionDate] datetime  NULL,
+    [MapFolio] nvarchar(10)  NULL,
+    [MapDisk] nvarchar(10)  NULL,
+    [Comments] nvarchar(max)  NULL
 );
 GO
 

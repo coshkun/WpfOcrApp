@@ -39,7 +39,12 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="MapNumber" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapScale" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EditionDate" Type="datetime" Nullable="true" />
+    <Property Name="MapFolio" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="MapDisk" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Notices">
     <Key>

@@ -27,7 +27,13 @@
             </TabItem>
             <TabItem Header="Folyo">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGrid1" Margin="10,145,10,10"/>
+                    <DataGrid x:Name="dataGrid2" Margin="10,145,10,10" HorizontalGridLinesBrush="#FFCCCCCC" VerticalGridLinesBrush="#FFCCCCCC" HeadersVisibility="Column" UseLayoutRounding="False"/>
+                    <TextBlock x:Name="textBlock1" Margin="10,10,10,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top"><Run Text="Select your maps on boad. And add them to your custom portfolio."/><Run Text=" "/><Run Text="You can add them in several ways."/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Katalog">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="dataGrid1" Margin="10" HorizontalGridLinesBrush="#FFCCCCCC" VerticalGridLinesBrush="#FFCCCCCC" HeadersVisibility="Column" UseLayoutRounding="False" LostFocus="dataGrid1_LostFocus"/>
                 </Grid>
             </TabItem>
         </TabControl>

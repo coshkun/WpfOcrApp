@@ -17,5 +17,10 @@ namespace WpfOcrApp.appdata
         public int Id { get; set; }
         public string MapNumber { get; set; }
         public string MapTittle { get; set; }
+        public string MapScale { get; set; }
+        public Nullable<System.DateTime> EditionDate { get; set; }
+        public string MapFolio { get; set; }
+        public string MapDisk { get; set; }
+        public string Comments { get; set; }
     }
 }

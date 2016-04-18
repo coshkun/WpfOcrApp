@@ -26,6 +26,11 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
           <ScalarProperty Name="MapTittle" ColumnName="MapTittle" />
+          <ScalarProperty Name="MapScale" ColumnName="MapScale" />
+          <ScalarProperty Name="EditionDate" ColumnName="EditionDate" />
+          <ScalarProperty Name="MapFolio" ColumnName="MapFolio" />
+          <ScalarProperty Name="MapDisk" ColumnName="MapDisk" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

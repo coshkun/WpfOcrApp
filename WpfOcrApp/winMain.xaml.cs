@@ -59,11 +59,20 @@ namespace WpfOcrApp
                       {
                           map.Id,
                           map.MapNumber,
-                          map.MapTittle
+                          map.MapTittle,
+                          map.MapScale,
+                          map.EditionDate,
+                          map.MapFolio,
+                          map.MapDisk
                       };
 
             dataGrid1.ItemsSource = snc.ToList();
             
+        }
+
+        private void dataGrid1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            dataGrid1.SelectedItems.Clear();
         }
     }
 }

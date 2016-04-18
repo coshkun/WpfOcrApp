@@ -44,7 +44,12 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="MapNumber" Type="nvarchar" Nullable="true" MaxLength="50" />
-    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="MapScale" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="EditionDate" Type="datetime" Nullable="true" />
+    <Property Name="MapFolio" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="MapDisk" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="Comments" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Notices">
     <Key>
@@ -110,7 +115,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="MapNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MapTittle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MapTittle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MapScale" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EditionDate" Type="DateTime" Precision="0" />
+          <Property Name="MapFolio" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MapDisk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Notices">
           <Key>
@@ -176,6 +186,11 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
           <ScalarProperty Name="MapTittle" ColumnName="MapTittle" />
+          <ScalarProperty Name="MapScale" ColumnName="MapScale" />
+          <ScalarProperty Name="EditionDate" ColumnName="EditionDate" />
+          <ScalarProperty Name="MapFolio" ColumnName="MapFolio" />
+          <ScalarProperty Name="MapDisk" ColumnName="MapDisk" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -26,7 +26,12 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="MapNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="MapTittle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MapTittle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MapScale" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EditionDate" Type="DateTime" Precision="0" />
+    <Property Name="MapFolio" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MapDisk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Notices">
     <Key>

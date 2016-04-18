@@ -64,6 +64,7 @@ C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\bin\Debug\Microsoft.VisualS
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\bin\Debug\EntityFramework.xml
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
+C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\WpfOcrApp.csprojResolveAssemblyReference.cache
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\winMain.g.cs
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\winOCR.g.cs
 C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\App.g.cs
