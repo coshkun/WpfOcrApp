@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="data3000Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Corrections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CorrectionId" Type="Int32" />
+    <Property Name="MapId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Folyo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="MapNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MapTittle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CorrId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Katalog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="MapNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MapTittle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Notices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NoticeNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WeekNo" Type="Int32" />
+    <Property Name="YearNo" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="data3000Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Corrections" EntityType="Self.Corrections" />
+    <EntitySet Name="Folyo" EntityType="Self.Folyo" />
+    <EntitySet Name="Katalog" EntityType="Self.Katalog" />
+    <EntitySet Name="Notices" EntityType="Self.Notices" />
+  </EntityContainer>
+</Schema>

@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000model.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000model.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("appdata/data3000_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cvextern.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("msvcp120.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("msvcr120.dll")]

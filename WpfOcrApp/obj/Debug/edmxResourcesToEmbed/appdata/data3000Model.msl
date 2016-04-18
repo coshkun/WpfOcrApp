@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="data3000ModelStoreContainer" CdmEntityContainer="data3000Entities">
+    <EntitySetMapping Name="Corrections">
+      <EntityTypeMapping TypeName="data3000Model.Corrections">
+        <MappingFragment StoreEntitySet="Corrections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CorrectionId" ColumnName="CorrectionId" />
+          <ScalarProperty Name="MapId" ColumnName="MapId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folyo">
+      <EntityTypeMapping TypeName="data3000Model.Folyo">
+        <MappingFragment StoreEntitySet="Folyo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
+          <ScalarProperty Name="MapTittle" ColumnName="MapTittle" />
+          <ScalarProperty Name="CorrId" ColumnName="CorrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Katalog">
+      <EntityTypeMapping TypeName="data3000Model.Katalog">
+        <MappingFragment StoreEntitySet="Katalog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MapNumber" ColumnName="MapNumber" />
+          <ScalarProperty Name="MapTittle" ColumnName="MapTittle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notices">
+      <EntityTypeMapping TypeName="data3000Model.Notices">
+        <MappingFragment StoreEntitySet="Notices">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NoticeNumber" ColumnName="NoticeNumber" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+          <ScalarProperty Name="YearNo" ColumnName="YearNo" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

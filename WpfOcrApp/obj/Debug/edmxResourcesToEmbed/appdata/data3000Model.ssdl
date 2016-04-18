@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="data3000Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Corrections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CorrectionId" Type="int" />
+    <Property Name="MapId" Type="int" />
+  </EntityType>
+  <EntityType Name="Folyo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MapNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" MaxLength="50" />
+    <Property Name="CorrId" Type="int" />
+  </EntityType>
+  <EntityType Name="Katalog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MapNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="MapTittle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Notices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NoticeNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="WeekNo" Type="int" />
+    <Property Name="YearNo" Type="int" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="data3000ModelStoreContainer">
+    <EntitySet Name="Corrections" EntityType="Self.Corrections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Folyo" EntityType="Self.Folyo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Katalog" EntityType="Self.Katalog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notices" EntityType="Self.Notices" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

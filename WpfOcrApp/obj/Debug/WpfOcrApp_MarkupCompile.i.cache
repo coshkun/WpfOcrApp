@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\coskun\Documents\Visual Studio 2015\Projects\Samples\WpfOcrApp\WpfOcrApp\obj\Debug\
+C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\obj\Debug\
 WpfOcrApp
 none
 false
 DEBUG;TRACE
-C:\Users\coskun\Documents\Visual Studio 2015\Projects\Samples\WpfOcrApp\WpfOcrApp\App.xaml
+C:\Users\coskun\Documents\GitHub\WpfOcrApp\WpfOcrApp\App.xaml
 2-326269736
-478815049
-81724154115
-18-1061282933
+81113918658
+151357399393
+23973606875
 winMain.xaml;winOCR.xaml;
 
-True
+False
 
